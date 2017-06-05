@@ -1,0 +1,43 @@
+.jumbotron{
+	background-image: url("../images/siliconvalleyBackground.png");
+	background-position: center;
+	background-size: 40%;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-color: black;
+	text-align: center;
+	color: white;
+
+}
+
+h1{
+	text-align: center;
+	color: white;
+}
+p{
+	color: white;
+}
+label{
+	color: white;
+}
+*{
+	box-sizing: border-box;
+}
+img{
+	height: 150px;
+	width: 225px;
+}
+.btn{
+	margin: 3px;
+}
+body{
+	background-color: AliceBlue;
+	background-size: 100%;
+	background-image: url("../images/binary-wallpaper.jpg");
+}
+
+.gifDiv{
+	display: inline-block;
+	float: left;
+	margin:3px;
+}

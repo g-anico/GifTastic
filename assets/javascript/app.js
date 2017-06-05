@@ -33,7 +33,7 @@ $(document).ready(function(){
   //function that displays the gifs
   function displayGifs(){
     var character = $(this).attr("data-name");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         character + "&api_key=dc6zaTOxFJmzC&limit=10";
         console.log(queryURL);//displays the constructed url. these are working
         console.log(character);//displays current character.these are working

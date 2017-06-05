@@ -27,9 +27,7 @@ $(document).ready(function(){
       displayGifButtons();
       return false;
 
-
-
-		});
+    });
 
 	}
   //function that displays the gifs
@@ -38,7 +36,7 @@ $(document).ready(function(){
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
         character + "&api_key=dc6zaTOxFJmzC&limit=10";
         console.log(queryURL);//displays the constructed url. these are working
-        // console.log(character);//displays current character.these are working
+        console.log(character);//displays current character.these are working
 
         $.ajax({
           url: queryURL,
@@ -47,7 +45,7 @@ $(document).ready(function(){
         .done(function(response){
           console.log(response);//console log to make sure something returns.
           $("#gifs-view").empty(); //empties everything in this div for the next click
-          var results = response.data; /////
+          var results = response.data;
           // if(results ==""){
           //   alert("There's no gif for this selected button");
           // }
@@ -70,13 +68,10 @@ $(document).ready(function(){
             $("#gifs-view").prepend(gifDiv);
         }
     });
-
 }
 //invoking the functions
 displayGifButtons();
 addNewButton();
-
-
 
 //event listeners
 $(document).on("click", ".character", displayGifs);

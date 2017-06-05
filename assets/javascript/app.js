@@ -46,9 +46,9 @@ $(document).ready(function(){
           console.log(response);//console log to make sure something returns.
           $("#gifs-view").empty(); //empties everything in this div for the next click
           var results = response.data;
-          // if(results ==""){
-          //   alert("There's no gif for this selected button");
-          // }
+          if(results ===""){
+            alert("There's no gif for this selected button");
+          }
           for (var i=0; i < results.length; i++){
             var gifDiv = $("<div>"); //uses jQuery to create a div for gifs to go inside
             gifDiv.addClass("gifDiv");

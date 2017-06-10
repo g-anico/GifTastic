@@ -8,24 +8,27 @@ $(document).ready(function(){
 		$("#buttons-view").empty(); //erases anything in this div so it does not duplicate the results
 		for(var i=0; i < characters.length; i++){
 			var gifButton = $("<button>");
-			gifButton.addClass("character");
-			gifButton.addClass("btn btn-primary");
-			gifButton.attr("data-name", characters[i]);
-			gifButton.text(characters[i]);
-      $("#buttons-view").append(gifButton);
+			
+			// Rather than writing `gifButton.add..` over and over again, you can chain these methods like so:
+			gifButton
+			  .addClass("btn btn-primary character") // You could also combine these into a space-separated string
+			  .attr("data-name", characters[i])
+			  .text(characters[i]);
+			
+        /* --------> */ $("#buttons-view").append(gifButton);
 		}
 	}
 	//function to add a new character gif button
 	function addNewButton(){
 		$("#addGif").on("click", function(){
-      event.preventDefault();
+        /* --------> */ event.preventDefault();
 			var character = $("#person-input").val().trim();
 			if (character == ""){
 				return false; //added so user cannot add a blank button
 			}
 			characters.push(character);// pushes new search item into the array "characters"
-      displayGifButtons();
-      return false;
+        displayGifButtons();
+        return false; // it's hard to tell where this function ends or what this line is for
 
     });
 
@@ -66,6 +69,18 @@ $(document).ready(function(){
             // gifDiv.append(gifRating);
 
             $("#gifs-view").prepend(gifDiv);
+	    // Now that you're familiar with many of the jQuery methods
+	    // you can make things easier on youself by concatenating you html
+	    // with strings and your raw data, for e.g.
+	    //
+	    // $('#gifs-view').html(
+	    //      '<div class="gifDiv">'
+            //    +   '<p>Rating: ' + results[i].rating + '</p>'
+	    //    ... etc.
+	    //	  + '</div>'
+	    // )
+	    //
+	    // But, of course, if you prefer the other, that's totally fine
         }
     });
 }

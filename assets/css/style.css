@@ -1,14 +1,33 @@
 .jumbotron{
-	background-image: url("../images/siliconvalleyBackground.png");
+	/*background-image: url("../images/siliconvalleyBackground.png");*/
 	background-position: center;
 	background-size: 40%;
 	height: 200px;
 	background-repeat: no-repeat;
-	background-color: black;
+	background-color: rgb(161,199,206);
 	text-align: center;
-	color: white;
+	color: black;
+	font-style: italic;
+	font-family: New Century Schoolbook, serif;
 
 }
+
+.char-search:focus::-webkit-input-placeholder { /* WebKit browsers */
+  color: white;
+}
+.char-search:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: white;
+}
+.char-search:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: white;
+}
+.char-search:focus:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: white;
+}
+.input-label {
+	font: black;
+}
+
 
 h1{
 	text-align: center;
@@ -28,12 +47,12 @@ img{
 	width: 225px;
 }
 .btn{
-	margin: 3px;
+	margin: 2px;
 }
 body{
-	background-color: AliceBlue;
+	background-color: rgb(161,199,206);
 	background-size: 100%;
-	background-image: url("../images/binary-wallpaper.jpg");
+	
 }
 
 .gifDiv{
